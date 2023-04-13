@@ -1,6 +1,7 @@
 import 'dart:async';
 
 import 'package:amazonclone/pages/home_page.dart';
+import 'package:amazonclone/pages/signin_page.dart';
 import 'package:flutter/material.dart';
 
 class SplashPage extends StatefulWidget {
@@ -13,7 +14,7 @@ class SplashPage extends StatefulWidget {
 }
 
 class _SplashPageState extends State<SplashPage> {
-  bool isSigned = true;
+  bool isSigned = false;
 
   @override
   void initState() {
@@ -62,7 +63,7 @@ class _SplashPageState extends State<SplashPage> {
       if (isSigned) {
         Navigator.pushReplacementNamed(context, HomePage.id);
       } else {
-        // novigate to SignIn page
+        Navigator.pushReplacementNamed(context, SignInPage.id);
       }
     });
   }
